@@ -1,5 +1,5 @@
 name 'gnubilafrance-atop'
-version '0.0.2'
+version '0.0.3'
 
 author 'Baptiste Grenier'
 license 'MIT'
