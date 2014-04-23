@@ -10,6 +10,9 @@
 # [*service_name*]
 #   Service name, default to atop.
 #
+# [*service*]
+#   Enable atop service, default to false.
+#
 # [*interval*]
 #   Interval between snapshots, default to 600.
 #
@@ -19,6 +22,7 @@
 class atop (
   $package_name = $atop::params::package_name,
   $service_name = $atop::params::service_name,
+  $service = $atop::params::package_name,
   $interval = $atop::params::interval,
   $logpath = $atop::params::logpath,
 ) inherits atop::params {
