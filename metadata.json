@@ -1,0 +1,22 @@
+{
+  "name": "gnubilafrance-atop",
+  "version": "0.0.4",
+  "author": "Baptiste Grenier",
+  "license": "Licensed under (MIT)",
+  "summary": "A module for managing atop",
+  "source": "https://github.com/gnubila-france/puppet-atop",
+  "project_page": "https://forge.puppetlabs.com/gnubilafrance/atop",
+  "issues_url": "https://github.com/gnubila-france/puppet-atop/issues",
+  "tags": ["sysadmin", "monitoring", "atop"],
+  "operatingsystem_support": [
+    {
+    "operatingsystem": "RedHat",
+    "operatingsystemrelease": [ "5.0", "6.0" ]
+    },
+    {
+    "operatingsystem": "Debian",
+    "operatingsystemrelease": [ "Wheezy", "Stable" ]
+    }
+   ]
+  "dependencies": [ ] 
+}
