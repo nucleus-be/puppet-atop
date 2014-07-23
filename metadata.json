@@ -17,6 +17,6 @@
     "operatingsystem": "Debian",
     "operatingsystemrelease": [ "Wheezy", "Stable" ]
     }
-   ]
+   ],
   "dependencies": [ ] 
 }
