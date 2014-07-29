@@ -26,7 +26,6 @@ class atop (
   $interval = $atop::params::interval,
   $logpath = $atop::params::logpath,
 ) inherits atop::params {
-
   $service_state = $service ? {
     true    => 'running',
     default => 'stopped',
@@ -47,4 +46,5 @@ class atop (
     enable => $service,
   }
 }
+
 # vim: set et sw=2:
