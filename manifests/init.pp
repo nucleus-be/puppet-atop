@@ -22,7 +22,7 @@
 class atop (
   $package_name = $atop::params::package_name,
   $service_name = $atop::params::service_name,
-  $service = $atop::params::package_name,
+  $service = $atop::params::service,
   $interval = $atop::params::interval,
   $logpath = $atop::params::logpath,
 ) inherits atop::params {
