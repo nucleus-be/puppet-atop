@@ -1,6 +1,6 @@
 {
   "name": "gnubilafrance-atop",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Baptiste Grenier",
   "summary": "A module for managing atop",
   "license": "Licensed under (MIT)",
