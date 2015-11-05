@@ -34,12 +34,12 @@ class atop (
   package { $package_name:
     ensure => 'installed',
   } ->
-  file { $conf_file:
+  file { $atop::params::conf_file:
     ensure  => 'file',
-    owner   => $conf_file_owner,
-    group   => $conf_file_group,
-    mode    => $conf_file_mode,
-    content => template($conf_file_template),
+    owner   => $atop::params::conf_file_owner,
+    group   => $atop::params::conf_file_group,
+    mode    => $atop::params::conf_file_mode,
+    content => template($atop::params::conf_file_template),
   } ->
   service { $service_name:
     ensure => $service_state,
