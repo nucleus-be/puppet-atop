@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "author": "Baptiste Grenier",
   "summary": "A module for managing atop",
-  "license": "Licensed under (MIT)",
+  "license": "MIT",
   "source": "https://github.com/gnubila-france/puppet-atop",
   "project_page": "https://forge.puppetlabs.com/gnubilafrance/atop",
   "issues_url": "https://github.com/gnubila-france/puppet-atop/issues",
