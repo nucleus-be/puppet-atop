@@ -1,6 +1,9 @@
 puppet-atop
 ===========
 
+[![Puppet Forge](http://img.shields.io/puppetforge/v/gnubilafrance/atop.svg)](https://forge.puppetlabs.com/gnubilafrance/atop)
+[![Build Status](https://travis-ci.org/gnubila-france/puppet-atop.png?branch=master)](https://travis-ci.org/gnubila-france/puppet-atop)
+
 Puppet module for managing atop.
 
 Tested under:
