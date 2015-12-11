@@ -19,7 +19,7 @@ script:
   - puppet --version
   - puppet-lint --no-80chars-check --relative .
   - find . -name *.pp | xargs puppet parser validate
-  - bundle exec rake validate
+  - rake validate
 matrix:
   exclude:
     - rvm: 1.8.7
