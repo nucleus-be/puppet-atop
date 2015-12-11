@@ -1,0 +1,12 @@
+rvm:
+ - 1.8.7
+ - 1.9.2
+ - 2.2.1
+notifications:
+    email: false
+env:
+    - PUPPET_VERSION="~> 3.0"
+    - PUPPET_VERSION="~> 4.0"
+script:
+    - puppet-lint --no-80chars-check --no-autoloader_layout-check .
+    - find . -name *.pp | xargs puppet parser validate
