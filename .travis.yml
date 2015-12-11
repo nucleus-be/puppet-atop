@@ -19,7 +19,6 @@ env:
 script:
   - puppet --version
   - puppet-lint --no-80chars-check --relative .
-  - find . -name *.pp | xargs puppet parser validate
   - rake validate
 matrix:
   exclude:
