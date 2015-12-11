@@ -16,7 +16,7 @@ env:
   - PUPPET_GEM_VERSION="~> 4.2.0"
 script:
   - puppet --version
-  - puppet-lint --no-80chars-check --no-autoloader_layout-check .
+  - puppet-lint --no-80chars-check --relative .
   - find . -name *.pp | xargs puppet parser validate
 matrix:
   exclude:
