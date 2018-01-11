@@ -59,6 +59,7 @@ class atop (
     }
     file{$logpath:
       ensure => 'link',
+      force  => true,
       target => "${logpath}_${::atop_version}",
     }
   }
