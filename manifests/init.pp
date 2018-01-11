@@ -52,7 +52,7 @@ class atop (
   # So lets make a symlink
   if ( $::atop_version) {
     file{"${logpath}_${::atop_version}":
-      ennsure => 'directory',
+      ensure  => 'directory',
       mode    => '0755',
       owner   => root,
       group   => root,
