@@ -22,9 +22,9 @@
 class atop (
   $package_name = $atop::params::package_name,
   $service_name = $atop::params::service_name,
-  $service = $atop::params::service,
-  $interval = $atop::params::interval,
-  $logpath = $atop::params::logpath,
+  $service      = $atop::params::service,
+  $interval     = $atop::params::interval,
+  $logpath      = $atop::params::logpath,
 ) inherits atop::params {
   $service_state = $service ? {
     true    => 'running',
@@ -40,10 +40,27 @@ class atop (
     group   => $atop::params::conf_file_group,
     mode    => $atop::params::conf_file_mode,
     content => template($atop::params::conf_file_template),
+    notify  => Service[$service_name],
   } ->
   service { $service_name:
     ensure => $service_state,
     enable => $service,
+  }
+
+  # Atop has different raw files between versions
+  # If you upgrade and the raw version is from a previous version atop refuses to boot
+  # So lets make a symlink
+  if ( $::atop_version) {
+    file{"${logpath}_${::atop_version}":
+      ennsure => 'directory',
+      mode    => '0755',
+      owner   => root,
+      group   => root,
+    }
+    file{$logpath:
+      ensure => 'link',
+      target => "${logpath}_${::atop_version}",
+    }
   }
 }
 
