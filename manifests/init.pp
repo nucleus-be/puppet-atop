@@ -61,6 +61,7 @@ class atop (
       ensure => 'link',
       force  => true,
       target => "${logpath}_${::atop_version}",
+      notify => Service[$service_name],
     }
   }
 }
